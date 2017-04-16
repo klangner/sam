@@ -1,3 +1,4 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Text.Sam.ParserSpec where
 
 import Prelude
@@ -5,6 +6,7 @@ import Test.Hspec
 import Test.QuickCheck
 
 import Text.Sam.Parser
+import Text.Sam.Document
 
 
 spec :: Spec
@@ -14,4 +16,4 @@ spec =
 
     it "empty document" $ do
         let str = ""
-        parse str `shouldBe` Empty
+        parse str `shouldBe` emptyDoc

@@ -1,11 +1,9 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Text.Sam.Parser where
 
-data Document = Text String
-              | Empty
-              deriving (Eq, Show)
-
+import Text.Sam.Document (Document, emptyDoc)
 
 -- | Parse document
 parse :: String -> Document
-parse _ = Empty
+parse _ = emptyDoc
 
