@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Text.Sam.ParserSpec where
+module Text.Sam.ParserSpec (spec) where
 
 import Prelude
 import Test.Hspec
