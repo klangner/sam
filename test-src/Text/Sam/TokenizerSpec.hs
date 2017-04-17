@@ -2,6 +2,8 @@
 module Text.Sam.TokenizerSpec (spec) where
 
 import Prelude
+import Data.Text (Text, pack)
+import Data.Text.Arbitrary
 import Test.Hspec
 import Test.QuickCheck
 
@@ -19,9 +21,15 @@ spec =
     it "abcd34" $
         tokenize "abcd34" `shouldBe` [Word "abcd", Number "34"]
 
-    it "34abcd" $
-        tokenize "34abcd" `shouldBe` [Number "34", Word "abcd"]
+    it "34  abcd" $
+        tokenize "34  abcd" `shouldBe` [Number "34", Whitespace "  ", Word "abcd"]
 
---     it "invariant: join . tokenizer" $ property $
---         \str -> (join . tokenize) str == str
+    it "new line" $
+        tokenize " \n " `shouldBe` [Whitespace " ", NewLine, Whitespace " "]
+
+    it "special chars" $
+        tokenize "-?" `shouldBe` [SpecialChar '-', SpecialChar '?']
+
+    it "invariant: join . tokenizer" $ property $
+        \str -> (join . tokenize) str == str
 

@@ -38,7 +38,8 @@ test-suite unit-tests
                     text >= 1.2,
                     Cabal >=1.16.0 && <2,
                     hspec >=2 && <3,
-                    QuickCheck >=2.6 && <3
+                    QuickCheck >=2.6 && <3,
+                    quickcheck-text >= 0.1.2
   other-modules:
                     Text.Sam.Document,
                     Text.Sam.Tokenizer
