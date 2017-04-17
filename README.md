@@ -19,7 +19,7 @@ stack test
 
 # Join in!
 
-We are happy to receive bug reports, fixes, documentation enhancements,
+I'm happy to receive bug reports, fixes, documentation enhancements,
 and other improvements.
 
 Please report bugs via the

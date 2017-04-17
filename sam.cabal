@@ -25,9 +25,7 @@ library
                     attoparsec >= 0.13,
                     text >= 1.2
   exposed-modules:
-                    Text.Sam,
                     Text.Sam.Document,
-                    Text.Sam.Parser,
                     Text.Sam.Tokenizer
 
 test-suite unit-tests
@@ -43,9 +41,7 @@ test-suite unit-tests
                     QuickCheck >=2.6 && <3
   other-modules:
                     Text.Sam.Document,
-                    Text.Sam.Parser,
                     Text.Sam.Tokenizer
-                    Text.Sam.ParserSpec,
                     Text.Sam.TokenizerSpec
   hs-source-dirs:
                     src,
